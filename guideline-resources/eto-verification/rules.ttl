@@ -1,0 +1,71 @@
+@prefix sh:   <http://www.w3.org/ns/shacl#> .
+@prefix rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd:  <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl:  <http://www.w3.org/2002/07/owl#> .
+@prefix schema: <http://schema.org/> .
+@prefix si:     <https://si-digital-framework.org/SI#> .
+@prefix eto:    <https://w3id.org/eudpp/eto#> .
+@prefix eudpp:  <https://w3id.org/eudpp#> .
+
+@prefix shapes: <https://www.cirpass2.fr/testing/eg01/> .
+
+shapes:Tyre
+  a sh:NodeShape ;
+  sh:targetClass eto:Tyre ;
+
+  sh:property [
+    sh:path   eudpp:hasManufacturer ;
+    sh:minCount 1 ;
+    sh:class  eudpp:Actor ;
+  ] ;
+  sh:property [
+    sh:path   eto:hasRetreader ;
+    sh:maxCount 1 ;
+    sh:class  eudpp:Actor ;
+  ] ;
+  sh:property [
+    sh:path   eto:SGTIN ;
+    sh:minCount 1 ;
+    sh:datatype xsd:string ;
+  ] ;
+  sh:property [
+    sh:path   eudpp:productName ;
+    sh:minCount 1 ;
+    sh:datatype xsd:string ;
+  ] .
+
+shapes:SectionWidth
+  a sh:NodeShape ;
+  sh:targetClass eto:SectionWidth ;
+
+  sh:property [
+    sh:path   eudpp:hasMeasurementUnit ;
+    sh:minCount 1 ;
+    sh:class  si:MeasurementUnit ;
+  ] ;
+  sh:property [
+    sh:path   eto:hasValue ;
+    sh:minCount 1 ;
+    sh:datatype xsd:double ;
+  ] .
+
+shapes:WetClass
+  a sh:NodeShape ;
+  sh:targetClass eto:WetClass ;
+
+  sh:property [
+    sh:path   eto:hasValue ;
+    sh:minCount 1 ;
+    sh:datatype xsd:string ;
+  ] .
+
+shapes:MudAndSnow
+  a sh:NodeShape ;
+  sh:targetClass eto:MudAndSnow ;
+
+  sh:property [
+    sh:path   eto:hasValue ;
+    sh:minCount 1 ;
+    sh:datatype xsd:boolean ;
+  ] .

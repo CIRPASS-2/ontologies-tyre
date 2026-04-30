@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<catalog prefer="public" xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog">
+    <uri id="User Entered Import Resolution" name="https://w3id.org/eudpp/eto" uri="eto.owl"/>
+    <uri id="User Entered Import Resolution" name="https://w3id.org/eudpp/SOC" uri="SOC.ttl"/>
+    <uri id="User Entered Import Resolution" name="https://w3id.org/eudpp/LCA" uri="LCA.ttl"/>
+    <uri id="User Entered Import Resolution" name="https://w3id.org/eudpp/P_DPP" uri="P_DPP.ttl"/>
+    <uri id="User Entered Import Resolution" name="https://w3id.org/eudpp/CONNECTOR" uri="CONNECTOR.ttl"/>
+    <uri id="User Entered Import Resolution" name="https://w3id.org/eudpp/ACTOR" uri="ACTOR.ttl"/>
+</catalog>

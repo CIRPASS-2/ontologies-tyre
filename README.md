@@ -8,7 +8,11 @@ The ontologies for the tyre sector stored in this repository and generated withi
 ## Overview  
 
 
-TODO
+This repository includes the following resources:  
+
+- **Example Tyre Ontology (ETO)**: an examplar sector-specific ontology for representing DPP tyres. ETO reuses the EU DPP CO.  
+
+- **Guideline-resources**: materials supporting the guidelines proposed by CIRPASS-2.  
 
 
 ---

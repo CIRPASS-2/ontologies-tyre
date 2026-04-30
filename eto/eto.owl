@@ -1,0 +1,1527 @@
+<?xml version="1.0"?>
+<Ontology xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="https://w3id.org/eudpp/eto"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     ontologyIRI="https://w3id.org/eudpp/eto"
+     versionIRI="https://w3id.org/eudpp/eto/0.1">
+    <Prefix name="" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="eto" IRI="https://www.w3id.org/eudpp/eto/"/>
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Import>https://w3id.org/eudpp/ACTOR</Import>
+    <Import>https://w3id.org/eudpp/CONNECTOR</Import>
+    <Import>https://w3id.org/eudpp/LCA</Import>
+    <Import>https://w3id.org/eudpp/P_DPP</Import>
+    <Import>https://w3id.org/eudpp/SOC</Import>
+    <Annotation>
+        <AnnotationProperty IRI="http://purl.org/dc/terms/description"/>
+        <Literal>Example Tyre Ontology (ETO) is an examplar ontology for the tyre sector.</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <Literal xml:lang="en">Example Tyre Ontology</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="owl:versionInfo"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">0.1</Literal>
+    </Annotation>
+    <Declaration>
+        <Class IRI="#AcousticInternalStructure"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#AmountOfActualRepairs"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#AspectRatio"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#BirthDate"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#CountryOfOrigin"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#DateOfELTCollection"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#ELTRecyclingChannelDestination"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#ELTRecyclingDate"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#ELTReuseStatus"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#EPRELRecordReferenceUrl"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#ExtraLoad"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#GeometricalTyreSize"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#HLPC"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#HighLoad"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#LabelPictureUrl"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#LabellingReferenceRegulation"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#LoadIndex"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#LoadIndexAfterRET"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#LoadIndexDualFitmentAfterRET"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#LoadIndexForDualFitment"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#LoadIndexForSupplementaryServiceCondition"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#LoadIndexForSupplementaryServiceConditionDualFitment"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#MudAndSnow"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#NoiseClass"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#NoisePerformance"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#PlaceOfELTCollection"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#PlaceOfELTRecycling"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#ProductLabelling"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#ProductMarking"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#ProductSpecification"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Regrooved"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#RegulationsComplianceCode"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#RegulationsComplianceMarkings"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#RemainingTreadDepth"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#RetreadingCycle"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#RimCode"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#RollingResistanceClass"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#SVHCPresence"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Sealant"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#SectionWidth"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#SectionWidthCode"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#SizePrefix"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#SizeSuffix"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#SpeedSymbol"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#SpeedSymbolAfterRET"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#SpeedSymbolForSupplementaryServiceCondition"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Structure"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#StructureWordMarking"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#TmsContainerPresence"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#TmsSensorPresence"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#TubeCharacteristic"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Tyre"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#WetClass"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#3PMSF"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasRetreader"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#DOTTINFactoryCode"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#DOTTINOptionalCode"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#DOTTINSizeCode"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#DOTTINWeekYear"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#SGTIN"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#commercialNameLongDescription"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#eanCode"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasValue"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#upcCode"/>
+    </Declaration>
+    <EquivalentClasses>
+        <Class IRI="#AcousticInternalStructure"/>
+        <DataAllValuesFrom>
+            <DataProperty IRI="#hasValue"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
+        </DataAllValuesFrom>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#AmountOfActualRepairs"/>
+        <DataAllValuesFrom>
+            <DataProperty IRI="#hasValue"/>
+            <Datatype abbreviatedIRI="xsd:integer"/>
+        </DataAllValuesFrom>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#AspectRatio"/>
+        <DataAllValuesFrom>
+            <DataProperty IRI="#hasValue"/>
+            <Datatype abbreviatedIRI="xsd:double"/>
+        </DataAllValuesFrom>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#BirthDate"/>
+        <DataAllValuesFrom>
+            <DataProperty IRI="#hasValue"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
+        </DataAllValuesFrom>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#CountryOfOrigin"/>
+        <DataAllValuesFrom>
+            <DataProperty IRI="#hasValue"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
+        </DataAllValuesFrom>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#DateOfELTCollection"/>
+        <DataAllValuesFrom>
+            <DataProperty IRI="#hasValue"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
+        </DataAllValuesFrom>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#ELTRecyclingChannelDestination"/>
+        <DataAllValuesFrom>
+            <DataProperty IRI="#hasValue"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
+        </DataAllValuesFrom>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#ELTRecyclingDate"/>
+        <DataAllValuesFrom>
+            <DataProperty IRI="#hasValue"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
+        </DataAllValuesFrom>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#ELTReuseStatus"/>
+        <DataAllValuesFrom>
+            <DataProperty IRI="#hasValue"/>
+            <Datatype abbreviatedIRI="xsd:boolean"/>
+        </DataAllValuesFrom>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#EPRELRecordReferenceUrl"/>
+        <DataAllValuesFrom>
+            <DataProperty IRI="#hasValue"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
+        </DataAllValuesFrom>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#ExtraLoad"/>
+        <DataMaxCardinality cardinality="1">
+            <DataProperty IRI="#hasValue"/>
+            <Datatype abbreviatedIRI="xsd:boolean"/>
+        </DataMaxCardinality>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#GeometricalTyreSize"/>
+        <DataAllValuesFrom>
+            <DataProperty IRI="#hasValue"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
+        </DataAllValuesFrom>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#HLPC"/>
+        <DataAllValuesFrom>
+            <DataProperty IRI="#hasValue"/>
+            <Datatype abbreviatedIRI="xsd:boolean"/>
+        </DataAllValuesFrom>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#HighLoad"/>
+        <DataMaxCardinality cardinality="1">
+            <DataProperty IRI="#hasValue"/>
+            <Datatype abbreviatedIRI="xsd:boolean"/>
+        </DataMaxCardinality>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#LabelPictureUrl"/>
+        <DataAllValuesFrom>
+            <DataProperty IRI="#hasValue"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
+        </DataAllValuesFrom>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#LabellingReferenceRegulation"/>
+        <DataAllValuesFrom>
+            <DataProperty IRI="#hasValue"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
+        </DataAllValuesFrom>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#LoadIndex"/>
+        <DataMaxCardinality cardinality="1">
+            <DataProperty IRI="#hasValue"/>
+            <Datatype abbreviatedIRI="xsd:integer"/>
+        </DataMaxCardinality>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#LoadIndexAfterRET"/>
+        <DataAllValuesFrom>
+            <DataProperty IRI="#hasValue"/>
+            <Datatype abbreviatedIRI="xsd:integer"/>
+        </DataAllValuesFrom>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#MudAndSnow"/>
+        <DataAllValuesFrom>
+            <DataProperty IRI="#hasValue"/>
+            <Datatype abbreviatedIRI="xsd:boolean"/>
+        </DataAllValuesFrom>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#NoiseClass"/>
+        <DataAllValuesFrom>
+            <DataProperty IRI="#hasValue"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
+        </DataAllValuesFrom>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#NoisePerformance"/>
+        <DataAllValuesFrom>
+            <DataProperty IRI="#hasValue"/>
+            <Datatype abbreviatedIRI="xsd:integer"/>
+        </DataAllValuesFrom>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#PlaceOfELTCollection"/>
+        <DataAllValuesFrom>
+            <DataProperty IRI="#hasValue"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
+        </DataAllValuesFrom>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#PlaceOfELTRecycling"/>
+        <DataAllValuesFrom>
+            <DataProperty IRI="#hasValue"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
+        </DataAllValuesFrom>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#Regrooved"/>
+        <DataAllValuesFrom>
+            <DataProperty IRI="#hasValue"/>
+            <Datatype abbreviatedIRI="xsd:boolean"/>
+        </DataAllValuesFrom>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#RegulationsComplianceCode"/>
+        <DataAllValuesFrom>
+            <DataProperty IRI="#hasValue"/>
+            <Datatype abbreviatedIRI="xsd:integer"/>
+        </DataAllValuesFrom>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#RegulationsComplianceMarkings"/>
+        <DataAllValuesFrom>
+            <DataProperty IRI="#hasValue"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
+        </DataAllValuesFrom>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#RemainingTreadDepth"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="https://w3id.org/eudpp#hasMeasurementUnit"/>
+            <Class IRI="https://si-digital-framework.org/SI#MeasurementUnit"/>
+        </ObjectAllValuesFrom>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#RemainingTreadDepth"/>
+        <DataAllValuesFrom>
+            <DataProperty IRI="#hasValue"/>
+            <Datatype abbreviatedIRI="xsd:double"/>
+        </DataAllValuesFrom>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#RetreadingCycle"/>
+        <DataAllValuesFrom>
+            <DataProperty IRI="#hasValue"/>
+            <Datatype abbreviatedIRI="xsd:integer"/>
+        </DataAllValuesFrom>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#RimCode"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="https://w3id.org/eudpp#hasMeasurementUnit"/>
+            <Class IRI="https://si-digital-framework.org/SI#MeasurementUnit"/>
+        </ObjectAllValuesFrom>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#RimCode"/>
+        <DataAllValuesFrom>
+            <DataProperty IRI="#hasValue"/>
+            <Datatype abbreviatedIRI="xsd:double"/>
+        </DataAllValuesFrom>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#RollingResistanceClass"/>
+        <DataAllValuesFrom>
+            <DataProperty IRI="#hasValue"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
+        </DataAllValuesFrom>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#SVHCPresence"/>
+        <DataAllValuesFrom>
+            <DataProperty IRI="#hasValue"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
+        </DataAllValuesFrom>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#Sealant"/>
+        <DataAllValuesFrom>
+            <DataProperty IRI="#hasValue"/>
+            <Datatype abbreviatedIRI="xsd:boolean"/>
+        </DataAllValuesFrom>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#SectionWidth"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="https://w3id.org/eudpp#hasMeasurementUnit"/>
+            <Class IRI="https://si-digital-framework.org/SI#MeasurementUnit"/>
+        </ObjectAllValuesFrom>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#SectionWidth"/>
+        <DataAllValuesFrom>
+            <DataProperty IRI="#hasValue"/>
+            <Datatype abbreviatedIRI="xsd:double"/>
+        </DataAllValuesFrom>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#SectionWidthCode"/>
+        <DataAllValuesFrom>
+            <DataProperty IRI="#hasValue"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
+        </DataAllValuesFrom>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#SizePrefix"/>
+        <DataAllValuesFrom>
+            <DataProperty IRI="#hasValue"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
+        </DataAllValuesFrom>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#SizeSuffix"/>
+        <DataAllValuesFrom>
+            <DataProperty IRI="#hasValue"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
+        </DataAllValuesFrom>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#SpeedSymbol"/>
+        <DataAllValuesFrom>
+            <DataProperty IRI="#hasValue"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
+        </DataAllValuesFrom>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#SpeedSymbolAfterRET"/>
+        <DataAllValuesFrom>
+            <DataProperty IRI="#hasValue"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
+        </DataAllValuesFrom>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#SpeedSymbolForSupplementaryServiceCondition"/>
+        <DataMaxCardinality cardinality="1">
+            <DataProperty IRI="#hasValue"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
+        </DataMaxCardinality>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#Structure"/>
+        <DataAllValuesFrom>
+            <DataProperty IRI="#hasValue"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
+        </DataAllValuesFrom>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#StructureWordMarking"/>
+        <DataAllValuesFrom>
+            <DataProperty IRI="#hasValue"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
+        </DataAllValuesFrom>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#TmsContainerPresence"/>
+        <DataAllValuesFrom>
+            <DataProperty IRI="#hasValue"/>
+            <Datatype abbreviatedIRI="xsd:boolean"/>
+        </DataAllValuesFrom>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#TmsSensorPresence"/>
+        <DataAllValuesFrom>
+            <DataProperty IRI="#hasValue"/>
+            <Datatype abbreviatedIRI="xsd:boolean"/>
+        </DataAllValuesFrom>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#TubeCharacteristic"/>
+        <DataAllValuesFrom>
+            <DataProperty IRI="#hasValue"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
+        </DataAllValuesFrom>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#Tyre"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="https://w3id.org/eudpp#hasManufacturer"/>
+            <Class IRI="https://w3id.org/eudpp#Actor"/>
+        </ObjectAllValuesFrom>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#Tyre"/>
+        <DataAllValuesFrom>
+            <DataProperty IRI="#DOTTINFactoryCode"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
+        </DataAllValuesFrom>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#Tyre"/>
+        <DataAllValuesFrom>
+            <DataProperty IRI="#DOTTINWeekYear"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
+        </DataAllValuesFrom>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#Tyre"/>
+        <DataAllValuesFrom>
+            <DataProperty IRI="#SGTIN"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
+        </DataAllValuesFrom>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#WetClass"/>
+        <DataAllValuesFrom>
+            <DataProperty IRI="#hasValue"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
+        </DataAllValuesFrom>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#3PMSF"/>
+        <DataMaxCardinality cardinality="1">
+            <DataProperty IRI="#hasValue"/>
+            <Datatype abbreviatedIRI="xsd:boolean"/>
+        </DataMaxCardinality>
+    </EquivalentClasses>
+    <SubClassOf>
+        <Class IRI="#AcousticInternalStructure"/>
+        <Class IRI="https://w3id.org/eudpp#QuantitativeProperty"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#AmountOfActualRepairs"/>
+        <Class IRI="https://w3id.org/eudpp#QuantitativeProperty"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#AspectRatio"/>
+        <Class IRI="https://w3id.org/eudpp#ProductDimension"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#BirthDate"/>
+        <Class IRI="https://w3id.org/eudpp#QuantitativeProperty"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#CountryOfOrigin"/>
+        <Class IRI="https://w3id.org/eudpp#QuantitativeProperty"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#DateOfELTCollection"/>
+        <Class IRI="https://w3id.org/eudpp#QuantitativeProperty"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ELTRecyclingChannelDestination"/>
+        <Class IRI="https://w3id.org/eudpp#QuantitativeProperty"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ELTRecyclingDate"/>
+        <Class IRI="https://w3id.org/eudpp#QuantitativeProperty"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ELTReuseStatus"/>
+        <Class IRI="https://w3id.org/eudpp#QuantitativeProperty"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#EPRELRecordReferenceUrl"/>
+        <Class IRI="#ProductLabelling"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ExtraLoad"/>
+        <Class IRI="#ProductSpecification"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#GeometricalTyreSize"/>
+        <Class IRI="https://w3id.org/eudpp#ProductDimension"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#HLPC"/>
+        <Class IRI="#ProductSpecification"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#HighLoad"/>
+        <Class IRI="#ProductSpecification"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#LabelPictureUrl"/>
+        <Class IRI="#ProductLabelling"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#LabellingReferenceRegulation"/>
+        <Class IRI="#ProductLabelling"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#LoadIndex"/>
+        <Class IRI="#ProductSpecification"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#LoadIndexAfterRET"/>
+        <Class IRI="#ProductSpecification"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#LoadIndexDualFitmentAfterRET"/>
+        <Class IRI="#LoadIndexAfterRET"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#LoadIndexForDualFitment"/>
+        <Class IRI="#LoadIndex"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#LoadIndexForSupplementaryServiceCondition"/>
+        <Class IRI="#LoadIndex"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#LoadIndexForSupplementaryServiceConditionDualFitment"/>
+        <Class IRI="#LoadIndex"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#MudAndSnow"/>
+        <Class IRI="#ProductMarking"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#NoiseClass"/>
+        <Class IRI="#ProductLabelling"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#NoisePerformance"/>
+        <Class IRI="#ProductLabelling"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#PlaceOfELTCollection"/>
+        <Class IRI="https://w3id.org/eudpp#QuantitativeProperty"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#PlaceOfELTRecycling"/>
+        <Class IRI="https://w3id.org/eudpp#QuantitativeProperty"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ProductLabelling"/>
+        <Class IRI="https://w3id.org/eudpp#QuantitativeProperty"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ProductMarking"/>
+        <Class IRI="https://w3id.org/eudpp#QuantitativeProperty"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ProductSpecification"/>
+        <Class IRI="https://w3id.org/eudpp#QuantitativeProperty"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Regrooved"/>
+        <Class IRI="https://w3id.org/eudpp#QuantitativeProperty"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#RegulationsComplianceCode"/>
+        <Class IRI="https://w3id.org/eudpp#QuantitativeProperty"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#RegulationsComplianceMarkings"/>
+        <Class IRI="https://w3id.org/eudpp#QuantitativeProperty"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#RemainingTreadDepth"/>
+        <Class IRI="https://w3id.org/eudpp#QuantitativeProperty"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#RetreadingCycle"/>
+        <Class IRI="https://w3id.org/eudpp#QuantitativeProperty"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#RimCode"/>
+        <Class IRI="https://w3id.org/eudpp#ProductDimension"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#RollingResistanceClass"/>
+        <Class IRI="#ProductLabelling"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SVHCPresence"/>
+        <Class IRI="https://w3id.org/eudpp#QuantitativeProperty"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Sealant"/>
+        <Class IRI="#ProductSpecification"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SectionWidth"/>
+        <Class IRI="https://w3id.org/eudpp#ProductDimension"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SectionWidthCode"/>
+        <Class IRI="https://w3id.org/eudpp#ProductDimension"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SizePrefix"/>
+        <Class IRI="#ProductMarking"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SizeSuffix"/>
+        <Class IRI="#ProductMarking"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SpeedSymbol"/>
+        <Class IRI="#ProductSpecification"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SpeedSymbolAfterRET"/>
+        <Class IRI="#ProductSpecification"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SpeedSymbolForSupplementaryServiceCondition"/>
+        <Class IRI="#SpeedSymbol"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Structure"/>
+        <Class IRI="#ProductSpecification"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#StructureWordMarking"/>
+        <Class IRI="#ProductSpecification"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#TmsContainerPresence"/>
+        <Class IRI="https://w3id.org/eudpp#QuantitativeProperty"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#TmsSensorPresence"/>
+        <Class IRI="https://w3id.org/eudpp#QuantitativeProperty"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#TubeCharacteristic"/>
+        <Class IRI="#ProductSpecification"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Tyre"/>
+        <Class IRI="https://w3id.org/eudpp#Product"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#WetClass"/>
+        <Class IRI="#ProductLabelling"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#3PMSF"/>
+        <Class IRI="#ProductMarking"/>
+    </SubClassOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#SGTIN"/>
+        <DataProperty IRI="https://w3id.org/eudpp#GTIN"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#commercialNameLongDescription"/>
+        <DataProperty IRI="https://w3id.org/eudpp#productName"/>
+    </SubDataPropertyOf>
+    <DataPropertyDomain>
+        <DataProperty IRI="#DOTTINFactoryCode"/>
+        <Class IRI="#Tyre"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#DOTTINOptionalCode"/>
+        <Class IRI="#Tyre"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#DOTTINSizeCode"/>
+        <Class IRI="#Tyre"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#DOTTINWeekYear"/>
+        <Class IRI="#Tyre"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#SGTIN"/>
+        <Class IRI="#Tyre"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#commercialNameLongDescription"/>
+        <Class IRI="#Tyre"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasValue"/>
+        <Class IRI="https://w3id.org/eudpp#QuantitativeProperty"/>
+    </DataPropertyDomain>
+    <DataPropertyRange>
+        <DataProperty IRI="#DOTTINFactoryCode"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#DOTTINOptionalCode"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#DOTTINSizeCode"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#DOTTINWeekYear"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#SGTIN"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#commercialNameLongDescription"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasValue"/>
+        <DataUnionOf>
+            <Datatype abbreviatedIRI="xsd:boolean"/>
+            <Datatype abbreviatedIRI="xsd:double"/>
+            <Datatype abbreviatedIRI="xsd:integer"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
+        </DataUnionOf>
+    </DataPropertyRange>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#AcousticInternalStructure</IRI>
+        <Literal>It indicates the presence of an internal structure with specific characteristics added to a “conventional” tyre with the aim to reduce the tyre cavity noise (not necessarily external rolling noise) (TRUE/FALSE)</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#AcousticInternalStructure</IRI>
+        <Literal>Acoustic Internal Structure</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#AmountOfActualRepairs</IRI>
+        <Literal>An incremental counter to record the number of repairs/patch occurred during the tyre&apos;s life - starting with zero</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#AmountOfActualRepairs</IRI>
+        <Literal>Amount Of Actual Repairs</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#AspectRatio</IRI>
+        <Literal>Aspect ratio</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#AspectRatio</IRI>
+        <Literal>Aspect Ratio</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#BirthDate</IRI>
+        <Literal>Date when the tyre is born following ISO-8601 format &quot;YYYY-MM-DD&quot;</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#BirthDate</IRI>
+        <Literal>Birth Date</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#CountryOfOrigin</IRI>
+        <Literal>Country of origin (ISO 3166-1 alpha-3)</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#CountryOfOrigin</IRI>
+        <Literal>Country Of Origin</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#DOTTINFactoryCode</IRI>
+        <Literal>DOT TIN (Tire Identification Number) for US Market - Plant code (NHTSA Part 574)2 or 3 digits. From April 2025, only 3 digits</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#DOTTINFactoryCode</IRI>
+        <Literal>DOT TIN Factory Code</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#DOTTINOptionalCode</IRI>
+        <Literal>DOT TIN - tire optional code</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#DOTTINOptionalCode</IRI>
+        <Literal>DOT TIN Optional Code</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#DOTTINSizeCode</IRI>
+        <Literal>DOT TIN - Tire size code</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#DOTTINSizeCode</IRI>
+        <Literal>DOT TIN Size Code</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#DOTTINWeekYear</IRI>
+        <Literal>DOT TIN (Tire Identification Number) for US Market - Production Date Week/Year (WWYY)</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#DOTTINWeekYear</IRI>
+        <Literal>DOT TIN Week Year</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#DateOfELTCollection</IRI>
+        <Literal>Date when the ELT has been collected by the used tyre collector (DD/MM/YY)</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#DateOfELTCollection</IRI>
+        <Literal>Date Of ELT Collection</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#ELTRecyclingChannelDestination</IRI>
+        <Literal>Country of deconstruction (ISO 3166-1 alpha-3) of the used tyre</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#ELTRecyclingChannelDestination</IRI>
+        <Literal>ELT Recycling Channel Destination</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#ELTRecyclingDate</IRI>
+        <Literal>Date when the ELT has been deconstructed (DD/MM/YY)</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#ELTRecyclingDate</IRI>
+        <Literal>ELT Recycling Date</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#ELTReuseStatus</IRI>
+        <Literal>Indicates whether the ELT has been sent back to the market because partly worn out or to be sent to a retreader</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#ELTReuseStatus</IRI>
+        <Literal>ELT Reuse Status</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#EPRELRecordReferenceUrl</IRI>
+        <Literal>URL to the EPREL record of the tire</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#EPRELRecordReferenceUrl</IRI>
+        <Literal>EPREL Record Reference Url</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#ExtraLoad</IRI>
+        <Literal>Extra Load symbol - to be associated to the load index if needed.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#ExtraLoad</IRI>
+        <Literal>Extra Load</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#GeometricalTyreSize</IRI>
+        <Literal>Tyre size designation</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#GeometricalTyreSize</IRI>
+        <Literal>Geometrical Tyre Size</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#HLPC</IRI>
+        <Literal>Indicates if the tire meets the UN R.30 definition of High Load (HL), values according to ETRTO standard</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#HLPC</IRI>
+        <Literal>HLPC</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#HighLoad</IRI>
+        <Literal>High Load symbol - to be associated to the load index if needed.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#HighLoad</IRI>
+        <Literal>High Load</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#LabelPictureUrl</IRI>
+        <Literal>URL to the label picture</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#LabelPictureUrl</IRI>
+        <Literal>Label Picture Url</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#LabellingReferenceRegulation</IRI>
+        <Literal>Regulation to which the labelling level of the tire for wet, noise and rolling resist    ance is given</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#LabellingReferenceRegulation</IRI>
+        <Literal>Labelling Reference Regulation</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#LoadIndex</IRI>
+        <Literal>Load index is a integer number refererenced by the load weight that tyre can carry.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#LoadIndex</IRI>
+        <Literal>Load Index</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#LoadIndexAfterRET</IRI>
+        <Literal>Load index after Retreading</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#LoadIndexAfterRET</IRI>
+        <Literal>Load Index After RET</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#LoadIndexDualFitmentAfterRET</IRI>
+        <Literal>Load index for dual fitment after Retreading</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#LoadIndexDualFitmentAfterRET</IRI>
+        <Literal>Load Index Dual Fitment After RET</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#LoadIndexForDualFitment</IRI>
+        <Literal>Load index for dual fitment</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#LoadIndexForDualFitment</IRI>
+        <Literal>Load Index For Dual Fitment</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#LoadIndexForSupplementaryServiceCondition</IRI>
+        <Literal>For commercial tyres, speed adjusted load</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#LoadIndexForSupplementaryServiceCondition</IRI>
+        <Literal>Load Index For Supplementary Service Condition</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#LoadIndexForSupplementaryServiceConditionDualFitment</IRI>
+        <Literal>For commercial tyres, speed adjusted load for dual fitment</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#LoadIndexForSupplementaryServiceConditionDualFitment</IRI>
+        <Literal>Load Index For Supplementary Service Condition Dual Fitment</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#MudAndSnow</IRI>
+        <Literal>Mud and Snow (M+S) marking</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#MudAndSnow</IRI>
+        <Literal>Mud And Snow</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#NoiseClass</IRI>
+        <Literal>Labelling noise class</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#NoiseClass</IRI>
+        <Literal>Noise Class</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#NoisePerformance</IRI>
+        <Literal>Labelling noise performance</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#NoisePerformance</IRI>
+        <Literal>Noise Performance</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#PlaceOfELTCollection</IRI>
+        <Literal>Country of collection (ISO 3166-1 alpha-3) of the used tyre</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#PlaceOfELTCollection</IRI>
+        <Literal>Place Of ELT Collection</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#PlaceOfELTRecycling</IRI>
+        <Literal>Indicates to which recycling channel category the used tyre has been sent (Cement , Pyrolisis, etc.)</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#PlaceOfELTRecycling</IRI>
+        <Literal>Place Of ELT Recycling</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#ProductLabelling</IRI>
+        <Literal>Labelling-related property</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#ProductLabelling</IRI>
+        <Literal>Product Labelling</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#ProductMarking</IRI>
+        <Literal>Marking-related property</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#ProductMarking</IRI>
+        <Literal>Product Marking</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#ProductSpecification</IRI>
+        <Literal>Specification-related property</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#ProductSpecification</IRI>
+        <Literal>Product Specification</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Regrooved</IRI>
+        <Literal>Indicates whether the tyre has been regrooved according to ECE R54 definition</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Regrooved</IRI>
+        <Literal>Regrooved</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#RegulationsComplianceCode</IRI>
+        <Literal>Code that indicates compliance of tire to specific international legal market requirement based on PRICAT standard</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#RegulationsComplianceCode</IRI>
+        <Literal>Regulations Compliance Code</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#RegulationsComplianceMarkings</IRI>
+        <Literal>Code description : lists the regulations to which the tire is compliant.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#RegulationsComplianceMarkings</IRI>
+        <Literal>Regulations Compliance Markings</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#RemainingTreadDepth</IRI>
+        <Literal>In millimeters, the remaining tread depth of the used tyre at the moment of deconstruction</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#RemainingTreadDepth</IRI>
+        <Literal>Remaining Tread Depth</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#RetreadingCycle</IRI>
+        <Literal>An incremental counter to record the number of retreading operations occurred during the tyre&apos;s life - starting with zero</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#RetreadingCycle</IRI>
+        <Literal>Retreading Cycle</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#RimCode</IRI>
+        <Literal>Rim diameter in millimeters or inches</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#RimCode</IRI>
+        <Literal>Rim Code</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#RollingResistanceClass</IRI>
+        <Literal>Labelling rolling resistance class</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#RollingResistanceClass</IRI>
+        <Literal>Rolling Resistance Class</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#SGTIN</IRI>
+        <Literal>Unique Item Identifier - SGTIN-96 following Pure identity EPC URN (GS1 EPCIS) format</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#SGTIN</IRI>
+        <Literal>SGTIN</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#SVHCPresence</IRI>
+        <Literal>SVHC designation (ECHA std) and presence % in weight of the article - EU REACH regulation</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#SVHCPresence</IRI>
+        <Literal>SVHC Presence</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Sealant</IRI>
+        <Literal>Indicates whether the tyre is equipped with a puncture sealant</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Sealant</IRI>
+        <Literal>Sealant</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#SectionWidth</IRI>
+        <Literal>Nominal section width of the tyre in millimeters</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#SectionWidth</IRI>
+        <Literal>Section Width</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#SectionWidthCode</IRI>
+        <Literal>Nominal section width of the tyre defined by a code (CV tyre)</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#SectionWidthCode</IRI>
+        <Literal>Section Width Code</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#SizePrefix</IRI>
+        <Literal>Part of identification marking of the tyre (see G9 ETRTO Std Manual, T = temporary, P = Passenger for TRA std, LT = light truck (alternative to C Marking of R54)</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#SizePrefix</IRI>
+        <Literal>Size Prefix</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#SizeSuffix</IRI>
+        <Literal>Part of identification marking for light truck tyres (see G9 - G13 ETRTO Std Manual)</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#SizeSuffix</IRI>
+        <Literal>Size Suffix</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#SpeedSymbol</IRI>
+        <Literal>Speed symbol</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#SpeedSymbol</IRI>
+        <Literal>Speed Symbol</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#SpeedSymbolAfterRET</IRI>
+        <Literal>Speed symbol after retreading</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#SpeedSymbolAfterRET</IRI>
+        <Literal>Speed Symbol After RET</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#SpeedSymbolForSupplementaryServiceCondition</IRI>
+        <Literal>For commercial tyres, load adjusted speed</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#SpeedSymbolForSupplementaryServiceCondition</IRI>
+        <Literal>Speed Symbol For Supplementary Service Condition</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Structure</IRI>
+        <Literal>Structure of the tyre. Radial (R) or Bias (B)</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Structure</IRI>
+        <Literal>Structure</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#StructureWordMarking</IRI>
+        <Literal>Tyre construction word marked on the sidewall</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#StructureWordMarking</IRI>
+        <Literal>Structure Word Marking</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#TmsContainerPresence</IRI>
+        <Literal>Indicates whether a rubber container for the Sensor is present on the tyre updated at each tyre inspection</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#TmsContainerPresence</IRI>
+        <Literal>Tms Container Presence</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#TmsSensorPresence</IRI>
+        <Literal>Indicates whether an electronic Sensor is present on the tyre updated at each tyre inspection</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#TmsSensorPresence</IRI>
+        <Literal>Tms Sensor Presence</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#TubeCharacteristic</IRI>
+        <Literal>It indicates tubeless or tube type tyres</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#TubeCharacteristic</IRI>
+        <Literal>Tube Characteristic</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Tyre</IRI>
+        <Literal>Tyre is a thick rubber ring, often filled with air, that is fitted around the outer edge of the wheel of a vehicle, allowing the vehicle to stick to the road surface and to travel over the ground more easily [Dictionary Cambride]</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Tyre</IRI>
+        <Literal>Tyre</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#WetClass</IRI>
+        <Literal>Labelling wet class</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#WetClass</IRI>
+        <Literal>Wet Class</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#commercialNameLongDescription</IRI>
+        <Literal>Marketing text / Commercial name of the product</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#commercialNameLongDescription</IRI>
+        <Literal>commercial name long description</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#eanCode</IRI>
+        <Literal>European Article number according to GS1 standard</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#eanCode</IRI>
+        <Literal>EAN Code</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hasRetreader</IRI>
+        <Literal>A product has a retreader (Actor from ACTOR module).</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hasRetreader</IRI>
+        <Literal>has retreader</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#hasValue</IRI>
+        <Literal>Property has value</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hasValue</IRI>
+        <Literal>has value</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#upcCode</IRI>
+        <Literal>(Private) Universal Product code according to GS1 standard</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#upcCode</IRI>
+        <Literal>UPC Code</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#3PMSF</IRI>
+        <Literal>3PMSF marking - Indicates tyres designed for use in severe snow conditions.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#3PMSF</IRI>
+        <Literal>3PMSF</Literal>
+    </AnnotationAssertion>
+</Ontology>
+
+
+
+<!-- Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi -->
+

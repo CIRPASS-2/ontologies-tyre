@@ -1,0 +1,834 @@
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns0: <http://purl.org/vocab/vann/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix dc11: <http://purl.org/dc/elements/1.1/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix ns1: <https://w3id.org/eudpp#> .
+@prefix ns2: <http://www.w3.org/2003/11/swrl#> .
+
+<https://w3id.org/eudpp/LCA>
+  a owl:Ontology ;
+  dcterms:bibliographicCitation <https://zenodo.org/records/15270342> ;
+  dcterms:created "2026-04-03" ;
+  dcterms:creator "Fatima Danash" ;
+  dcterms:description """The LCA module provides classes and properties for representing life-cycle-assessment related information of the digital passport data of some product. 
+
+DEPENDENCIES: This module has dependencies to the product EU DPP Core Ontology modules: P_DPP.""" ;
+  dcterms:issued "2026-04-30" ;
+  dcterms:license <https://www.apache.org/licenses/LICENSE-2.0>, """This ontology is licensed under the Apache License, Version 2.0. 
+In case of dispute over Apache 2.0 applicability, or in case considering the ontology as a document, this ontology document is to be considered licensed under the Creative Commons Attribution 4.0 International (CC BY 4.0).""" ;
+  dcterms:title "The LCA module of the EU regulatory compliant Digital Product Passport (EU DPP LCA)" ;
+  ns0:preferredNamespacePrefix "lca" ;
+  rdfs:comment "The LCA module of an EU DPP core ontology proposed by the CIRPASS-2 European project." ;
+  rdfs:label "EU DPP LCA" ;
+  owl:versionInfo "1.9.4" .
+
+<http://purl.org/dc/dcterms/bibliographicCitation> a owl:AnnotationProperty .
+<http://purl.org/dc/dcterms/creator> a owl:AnnotationProperty .
+<http://purl.org/dc/dcterms/description> a owl:AnnotationProperty .
+<http://purl.org/dc/dcterms/issued> a owl:AnnotationProperty .
+<http://purl.org/dc/dcterms/license> a owl:AnnotationProperty .
+<http://purl.org/dc/dcterms/title> a owl:AnnotationProperty .
+dc11:description a owl:AnnotationProperty .
+dcterms:bibliographicCitation a owl:AnnotationProperty .
+dcterms:created a owl:AnnotationProperty .
+dcterms:creator a owl:AnnotationProperty .
+dcterms:description a owl:AnnotationProperty .
+dcterms:issued a owl:AnnotationProperty .
+dcterms:license a owl:AnnotationProperty .
+dcterms:title a owl:AnnotationProperty .
+ns0:preferredNamespacePrefix a owl:AnnotationProperty .
+<https://w3id.org/eudpp/has_unit> a owl:AnnotationProperty .
+xsd:date a rdfs:Datatype .
+<https://w3id.org/eudpp#assessIC>
+  a owl:ObjectProperty ;
+  owl:inverseOf <https://w3id.org/eudpp#isAssessedByICI> ;
+  rdfs:domain <https://w3id.org/eudpp#ImpactCategoryIndicator> ;
+  rdfs:range <https://w3id.org/eudpp#ImpactCategory> .
+
+<https://w3id.org/eudpp#calculatedByCM>
+  a owl:ObjectProperty ;
+  owl:inverseOf <https://w3id.org/eudpp#calculatesCF> .
+
+<https://w3id.org/eudpp#calculatesCF>
+  a owl:ObjectProperty ;
+  rdfs:domain <https://w3id.org/eudpp#CharacterizationModel> ;
+  rdfs:range <https://w3id.org/eudpp#CharacterizationFactor> .
+
+<https://w3id.org/eudpp#concernsLCStage>
+  a owl:ObjectProperty ;
+  rdfs:domain <https://w3id.org/eudpp#LcaResult> ;
+  rdfs:range <https://w3id.org/eudpp#LifeCycleStage> .
+
+<https://w3id.org/eudpp#hasFlowType>
+  a owl:ObjectProperty ;
+  rdfs:domain <https://w3id.org/eudpp#FlowResult> ;
+  rdfs:range <https://w3id.org/eudpp#FlowType> .
+
+<https://w3id.org/eudpp#hasImpactCategory>
+  a owl:ObjectProperty ;
+  rdfs:domain <https://w3id.org/eudpp#ImpactResult> ;
+  rdfs:range <https://w3id.org/eudpp#ImpactCategory> .
+
+<https://w3id.org/eudpp#hasImpactType>
+  a owl:ObjectProperty ;
+  rdfs:domain <https://w3id.org/eudpp#ImpactCategory> ;
+  rdfs:range <https://w3id.org/eudpp#ImpactType> .
+
+<https://w3id.org/eudpp#imposedByMethod>
+  a owl:ObjectProperty ;
+  owl:inverseOf <https://w3id.org/eudpp#imposesIC> .
+
+<https://w3id.org/eudpp#imposesIC>
+  a owl:ObjectProperty ;
+  rdfs:domain <https://w3id.org/eudpp#Methodology> ;
+  rdfs:range <https://w3id.org/eudpp#ImpactCategory> .
+
+<https://w3id.org/eudpp#includedInMethodology>
+  a owl:ObjectProperty ;
+  owl:inverseOf <https://w3id.org/eudpp#includesMethod> .
+
+<https://w3id.org/eudpp#includesMethod>
+  a owl:ObjectProperty ;
+  rdfs:domain <https://w3id.org/eudpp#Methodology> ;
+  rdfs:range <https://w3id.org/eudpp#Method> .
+
+<https://w3id.org/eudpp#isAssessedByICI> a owl:ObjectProperty .
+<https://w3id.org/eudpp#quantifiedByCF>
+  a owl:ObjectProperty ;
+  owl:inverseOf <https://w3id.org/eudpp#quantifiesICI> .
+
+<https://w3id.org/eudpp#quantifiesICI>
+  a owl:ObjectProperty ;
+  rdfs:domain <https://w3id.org/eudpp#CharacterizationFactor> ;
+  rdfs:range <https://w3id.org/eudpp#ImpactCategoryIndicator> .
+
+<https://w3id.org/eudpp#usedInMethod>
+  a owl:ObjectProperty ;
+  owl:inverseOf <https://w3id.org/eudpp#usesCM> .
+
+<https://w3id.org/eudpp#usesCM>
+  a owl:ObjectProperty ;
+  rdfs:domain <https://w3id.org/eudpp#Method> ;
+  rdfs:range <https://w3id.org/eudpp#CharacterizationModel> .
+
+<http://qudt.org/schema/qudt#numericValue>
+  a owl:DatatypeProperty ;
+  rdfs:domain <https://w3id.org/eudpp#LcaResult> ;
+  rdfs:range [
+    a rdfs:Datatype ;
+    owl:unionOf (
+     xsd:decimal
+     xsd:double
+     xsd:float
+     xsd:integer
+   )
+  ] ;
+  rdfs:isDefinedBy <http://qudt.org/schema/qudt> ;
+  rdfs:label "numeric value" .
+
+<https://w3id.org/eudpp#hasDefaultUnit>
+  a owl:DatatypeProperty ;
+  rdfs:domain <https://w3id.org/eudpp#ImpactCategoryIndicator> ;
+  rdfs:range xsd:string .
+
+<https://w3id.org/eudpp#hasUnit>
+  a owl:DatatypeProperty ;
+  rdfs:domain <https://w3id.org/eudpp#LcaResult> ;
+  rdfs:range xsd:string .
+
+<https://w3id.org/eudpp#AirPollutionFootprint>
+  a owl:Class ;
+  owl:equivalentClass [
+    a owl:Class ;
+    owl:intersectionOf (
+     <https://w3id.org/eudpp#ImpactResult>
+     _:genid8
+   )
+  ] ;
+  rdfs:comment "Quantifies the release of airborne pollutants (e.g., particulate matter, photochemical ozone formation) over the life cycle of a product. AirPollutionFootprint is an ImpactResult associated with relevant environmental impact categories." ;
+  rdfs:label "Air Pollution Footprint" .
+
+<https://w3id.org/eudpp#CarbonFootprint>
+  a owl:Class ;
+  owl:equivalentClass [
+    a owl:Class ;
+    owl:intersectionOf (
+     <https://w3id.org/eudpp#ImpactResult>
+     _:genid16
+   )
+  ] ;
+  rdfs:comment "means the sum of greenhouse gas emissions and greenhouse gas removals in a product system, expressed as CO equivalents and based on a life cycle assessment using the single impact category of climate change. (ESPR Art 2 25))" ;
+  rdfs:label "Carbon Footprint" .
+
+<https://w3id.org/eudpp#CharacterizationFactor>
+  a owl:Class ;
+  rdfs:comment "Also called Impact factors, are factors that quantify the relative impact of different substances within the same category. These factors are used to convert the number of emissions into impact scores for each category. (LCAnet Ontology, SmartACV Project, Version 1.0, 2025)" ;
+  rdfs:label "Characterization Factor" .
+
+<https://w3id.org/eudpp#CharacterizationModel>
+  a owl:Class ;
+  rdfs:comment """A characterization model provides a mathematical framework, as a set of equations, to quantify an impact category based on the chosen method. A characterization model is used by a method. (LCAnet Ontology, SmartACV Project, Version 1.0, 2025) 
+Example: IPCC (2021) AR6.""" ;
+  rdfs:label "Characterization Model" .
+
+<https://w3id.org/eudpp#EmissionFlow>
+  a owl:Class ;
+  rdfs:subClassOf <https://w3id.org/eudpp#FlowType> ;
+  rdfs:comment "A type of flow representing substances released to the environment during a product’s life cycle." ;
+  rdfs:label "Emission Flow" .
+
+<https://w3id.org/eudpp#EnergyFlow>
+  a owl:Class ;
+  rdfs:subClassOf <https://w3id.org/eudpp#ResourceFlow> .
+
+<https://w3id.org/eudpp#EnergyFootprint>
+  a owl:Class ;
+  owl:equivalentClass [
+    a owl:Class ;
+    owl:intersectionOf (
+     <https://w3id.org/eudpp#FlowResult>
+     _:genid20
+   )
+  ] ;
+  rdfs:comment "Quantifies the total energy use associated with a product throughout its life cycle, including renewable and non-renewable sources. EnergyFootprint is a FlowResult linked to the Energy FlowType." ;
+  rdfs:label "Energy Footprint" .
+
+<https://w3id.org/eudpp#EnvironmentalFootprint>
+  a owl:Class ;
+  owl:equivalentClass [
+    a owl:Class ;
+    owl:intersectionOf (
+     <https://w3id.org/eudpp#ImpactResult>
+     _:genid24
+   )
+  ] ;
+  rdfs:comment "A comprehensive quantification of all environmental impacts resulting from a product throughout its life cycle. EnvironmentalFootprint may cover a single impact category or an aggregated set of categories according to the Product Environmental Footprint method (ESPR Art. 2(24))." ;
+  rdfs:label "Environmental Footprint" .
+
+<https://w3id.org/eudpp#EutrophicationFootprint>
+  a owl:Class ;
+  owl:equivalentClass [
+    a owl:Class ;
+    owl:intersectionOf (
+     <https://w3id.org/eudpp#ImpactResult>
+     _:genid29
+   )
+  ] ;
+  rdfs:comment "Quantifies nutrient enrichment impacts (eutrophication) on freshwater, marine, or terrestrial ecosystems caused by a product during its life cycle. It aggregates relevant ImpactCategories." ;
+  rdfs:label "Eutrophication Footprint" .
+
+<https://w3id.org/eudpp#FlowResult>
+  a owl:Class ;
+  owl:equivalentClass [
+    a owl:Class ;
+    owl:intersectionOf (
+     <https://w3id.org/eudpp#LcaResult>
+     _:genid39
+   )
+  ] ;
+  rdfs:subClassOf <https://w3id.org/eudpp#LcaResult> ;
+  rdfs:comment "A type of LCAResult that quantifies the flows of materials, energy, or emissions associated with a product" ;
+  rdfs:label "Flow result" .
+
+<https://w3id.org/eudpp#FlowType>
+  a owl:Class ;
+  rdfs:comment "A category representing the type of flow quantified in a life cycle assessment. It is used to classify FlowResults according to the kind of resource or emission being measured." ;
+  rdfs:label "Flow Type" .
+
+<https://w3id.org/eudpp#FossilEnergyFootprint>
+  a owl:Class ;
+  owl:equivalentClass [
+    a owl:Class ;
+    owl:intersectionOf (
+     <https://w3id.org/eudpp#FlowResult>
+     _:genid43
+   )
+  ] ;
+  rdfs:comment "Quantifies the consumption of fossil energy (coal, oil, natural gas) by a product during its life cycle. It is a specialized EnergyFootprint and a FlowResult with FlowType FossilEnergy." ;
+  rdfs:label "Fossil Energy Footprint" .
+
+<https://w3id.org/eudpp#ImpactCategory>
+  a owl:Class ;
+  rdfs:comment "An impact category represents a specific environmental issue that the LCA aims to assess, such as global warming or ozone depletion. Each category aggregates the effects of different emissions that contribute to the same environmental problem. (LCAnet Ontology, SmartACV Project, Version 1.0, 2025) An impact category is classified as whether is corresponds to environmental impact, social impact, etc." ;
+  rdfs:label "Impact Category" .
+
+<https://w3id.org/eudpp#ImpactCategoryIndicator>
+  a owl:Class ;
+  rdfs:comment """An impact category refers to a specific metric/measurable quantity that is used to quantify an impact category. (LCAnet Ontology, SmartACV Project, Version 1.0, 2025)
+Examples include: Global Warming Potential (GWP) and Ozone Depletion Potential (ODP).""" ;
+  rdfs:label "Impact Category Indicator" .
+
+<https://w3id.org/eudpp#ImpactResult>
+  a owl:Class ;
+  owl:equivalentClass [
+    a owl:Class ;
+    owl:intersectionOf (
+     <https://w3id.org/eudpp#LcaResult>
+     _:genid47
+   )
+  ] ;
+  rdfs:subClassOf <https://w3id.org/eudpp#LcaResult> ;
+  dc11:description "A type of LCAResult that quantifies the effect of a product on a specific impact category, such as climate change, human toxicity, or eutrophication" ;
+  rdfs:label "Impact result" .
+
+<https://w3id.org/eudpp#ImpactType>
+  a owl:Class ;
+  rdfs:comment "A category representing the type of an impact category measured in a life cycle assessment. Each ImpactType classifies ImpactCategories according to the area of concern, such as environmental, social, economic, or human health." ;
+  rdfs:label "Impact Type" .
+
+<https://w3id.org/eudpp#LandFootprint>
+  a owl:Class ;
+  owl:equivalentClass [
+    a owl:Class ;
+    owl:intersectionOf (
+     <https://w3id.org/eudpp#ImpactResult>
+     _:genid51
+   )
+  ] ;
+  rdfs:comment "Quantifies the occupation and transformation of land caused by a product throughout its life cycle. LandFootprint is an ImpactResult linked to the LandUse impact category." ;
+  rdfs:label "Land Footprint" .
+
+<https://w3id.org/eudpp#LcaResult>
+  a owl:Class ;
+  rdfs:comment "A measurable outcome of a life cycle assessment, representing the quantified effect of a product." ;
+  rdfs:label "LCA result" .
+
+<https://w3id.org/eudpp#LifeCycleStage>
+  a owl:Class ;
+  rdfs:comment "A phase in the life cycle of a product, from raw material acquisition through production, use, and end-of-life, in accordance with life cycle concepts defined in ISO 14040 and ISO 14044" ;
+  rdfs:label "Life Cycle Stage" .
+
+<https://w3id.org/eudpp#MaterialFootprint>
+  a owl:Class ;
+  owl:equivalentClass [
+    a owl:Class ;
+    owl:intersectionOf (
+     <https://w3id.org/eudpp#FlowResult>
+     _:genid55
+   )
+  ] ;
+  rdfs:comment "refers to the total amount of raw materials extracted to meet final consumption demands. (ESPR Art 2 (26))." ;
+  rdfs:label "Material Footprint" .
+
+<https://w3id.org/eudpp#Method>
+  a owl:Class ;
+  rdfs:comment "LCIA methods allow to transform and aggregate emissions to the environment and resource use data into a limited set of interpretable and reportable impact potential scores. (Adapted from LCAnet Ontology, SmartACV Project, Version 1.0, 2025)" ;
+  rdfs:label "Method" .
+
+<https://w3id.org/eudpp#Methodology>
+  a owl:Class ;
+  rdfs:comment """Related LCIA methods can be grouped under LCIA methodologies. (ILCD Handbook, General guidance). 
+Examples of methodologies include EN15804+A2, EF v3.1, Impact World.""" ;
+  rdfs:label "Methodology" .
+
+<https://w3id.org/eudpp#OzoneDepletionFootprint>
+  a owl:Class ;
+  owl:equivalentClass [
+    a owl:Class ;
+    owl:intersectionOf (
+     <https://w3id.org/eudpp#ImpactResult>
+     _:genid59
+   )
+  ] ;
+  rdfs:comment "Quantifies the potential stratospheric ozone layer depletion caused by substances emitted by a product throughout its life cycle. It is an ImpactResult linked to the Ozone Depletion impact category." ;
+  rdfs:label "Ozone Depletion Footprint" .
+
+<https://w3id.org/eudpp#ResourceFlow>
+  a owl:Class ;
+  rdfs:subClassOf <https://w3id.org/eudpp#FlowType> ;
+  rdfs:comment "A type of flow representing the consumption or use of natural resources throughout a product’s life cycle." ;
+  rdfs:label "Resource Flow" .
+
+<https://w3id.org/eudpp#ToxicityFootprint>
+  a owl:Class ;
+  owl:equivalentClass [
+    a owl:Class ;
+    owl:intersectionOf (
+     <https://w3id.org/eudpp#ImpactResult>
+     _:genid63
+   )
+  ] ;
+  rdfs:comment "Quantifies the potential human health and ecological toxicity impacts of a product over its life cycle. ToxicityFootprint aggregates relevant ImpactCategories such as Human Toxicity (cancer and non-cancer) and Ecotoxicity." ;
+  rdfs:label "Toxicity Footprint" .
+
+<https://w3id.org/eudpp#WaterFootprint>
+  a owl:Class ;
+  owl:equivalentClass [
+    a owl:Class ;
+    owl:intersectionOf (
+     <https://w3id.org/eudpp#FlowResult>
+     _:genid73
+   )
+  ] ;
+  rdfs:comment "Quantifies the freshwater consumption associated with a product throughout its life cycle. WaterFootprint is a FlowResult linked to the Water FlowType." ;
+  rdfs:label "Water Footrpint" .
+
+<https://w3id.org/eudpp#LotosEurosModel>
+  a owl:NamedIndividual, <https://w3id.org/eudpp#CharacterizationModel> ;
+  dcterms:bibliographicCitation "(Van Zelm et al, 2008) as applied in ReCiPe 2008" ;
+  rdfs:label "LOTOS-EUROS model" .
+
+<https://w3id.org/eudpp#abioticResourceDepletionAdpUltimateReserves>
+  a owl:NamedIndividual, <https://w3id.org/eudpp#ImpactCategoryIndicator> ;
+  ns1:assessIC ns1:resourceUseMineralsAndMetals ;
+  ns1:hasDefaultUnit "kg Sb -eq" ;
+  rdfs:label "Abiotic resource depletion (ADP ultimate reserves)" .
+
+ns1:accumulatedExceedance
+  a owl:NamedIndividual, ns1:CharacterizationModel ;
+  dcterms:bibliographicCitation "(Seppälä et al. 2006, Posch et al, 2008)", "(Seppälä et al., 2006, Posch et al, 2008)" ;
+  rdfs:label "Accumulated Exceedance" .
+
+ns1:accumulatedExceedanceAE
+  a owl:NamedIndividual, ns1:ImpactCategoryIndicator ;
+  ns1:assessIC ns1:acidification ;
+  ns1:hasDefaultUnit "mol H+ -eq", "mol N -eq" ;
+  rdfs:label "Accumulated Exceedance (AE)" .
+
+ns1:acidification
+  a owl:NamedIndividual, ns1:ImpactCategory ;
+  ns1:hasImpactType ns1:environmentalImpact ;
+  rdfs:comment "Measures the potential of a product system's emissions to cause acidification in ecosystems (soil, water, vegetation), mainly from SO₂, NOx, and NH₃ emissions." ;
+  rdfs:label "Acidification" .
+
+ns1:availableWaterRemainingModel
+  a owl:NamedIndividual, ns1:CharacterizationModel ;
+  dcterms:bibliographicCitation "(Boulay et al., 2018; UNEP 2016)" ;
+  rdfs:label "Available WAter REmaining (AWARE) model" .
+
+ns1:basedOnUSEtox2.1Model
+  a owl:NamedIndividual, ns1:CharacterizationModel ;
+  dcterms:bibliographicCitation "(Fantke et al. 2017), adapted as in Saouter et al., 2018" ;
+  rdfs:label "Based on USEtox2.1 model" .
+
+ns1:bernModelBasedOnIPCC2021
+  a owl:NamedIndividual, ns1:CharacterizationModel ;
+  dcterms:bibliographicCitation "(Forster et al., 2021)" ;
+  rdfs:label "Bern model based on IPCC 2021" .
+
+ns1:bioticResourceDepletionFossilFuelsAdpFossil
+  a owl:NamedIndividual, ns1:ImpactCategoryIndicator ;
+  ns1:assessIC ns1:resourceUseFossils ;
+  ns1:hasDefaultUnit "MJ" ;
+  rdfs:label "Biotic resource depletion fossil fuels (ADP-fossil)" .
+
+ns1:carbonEmission a owl:NamedIndividual, ns1:EmissionFlow .
+ns1:cf001 a owl:NamedIndividual, ns1:CarbonFootprint .
+ns1:climateChangeTotal
+  a owl:NamedIndividual, ns1:ImpactCategory ;
+  ns1:hasImpactType ns1:environmentalImpact ;
+  rdfs:label "Climate change, total" .
+
+ns1:cml2002MethodV.4.8
+  a owl:NamedIndividual, ns1:CharacterizationModel ;
+  dcterms:bibliographicCitation "van Oers et al., 2002" ;
+  rdfs:label "CML 2002 method, v.4.8" .
+
+ns1:comparativeToxicUnitForEcosystemsCTUe
+  a owl:NamedIndividual, ns1:ImpactCategoryIndicator ;
+  ns1:assessIC ns1:ecotoxicityFreshwater ;
+  ns1:hasDefaultUnit "CTUe" ;
+  rdfs:label "Comparative Toxic Unit for ecosystems (CTUe)" .
+
+ns1:comparativeToxicUnitForHumansCTUh
+  a owl:NamedIndividual, ns1:ImpactCategoryIndicator ;
+  ns1:assessIC ns1:humanToxicityCancer, ns1:humanToxicityNonCancer ;
+  ns1:hasDefaultUnit "CTUh" ;
+  rdfs:label "Comparative Toxic Unit for humans (CTUh)" .
+
+ns1:distribution
+  a owl:NamedIndividual, ns1:LifeCycleStage ;
+  rdfs:comment "Stage involving transport and distribution of the product to the market." ;
+  rdfs:label "Distribution" .
+
+ns1:economicalImpact
+  a owl:NamedIndividual, ns1:ImpactType ;
+  rdfs:label "Economical Impact" .
+
+ns1:ecotoxicityFreshwater
+  a owl:NamedIndividual, ns1:ImpactCategory ;
+  ns1:hasImpactType ns1:environmentalImpact ;
+  rdfs:label "Ecotoxicity, freshwater" .
+
+ns1:edipModel
+  a owl:NamedIndividual, ns1:CharacterizationModel ;
+  dcterms:bibliographicCitation "based on the ODPs of the World Meteorological Organisation (WMO) over an infinite time horizon (WMO 2014 + integrations)" ;
+  rdfs:label "EDIP model" .
+
+ns1:endOfLife
+  a owl:NamedIndividual, ns1:LifeCycleStage ;
+  rdfs:comment "Stage involving disposal, recycling, or recovery of the product." ;
+  rdfs:label "End Of Life" .
+
+ns1:environmentalImpact
+  a owl:NamedIndividual, ns1:ImpactType ;
+  rdfs:label "Environmental Impact" .
+
+ns1:eutrendModel
+  a owl:NamedIndividual, ns1:CharacterizationModel ;
+  dcterms:bibliographicCitation "(Struijs et al, 2009) as applied in ReCiPe 2008" ;
+  rdfs:label "EUTREND model" .
+
+ns1:eutrophicationFreshwater
+  a owl:NamedIndividual, ns1:ImpactCategory ;
+  ns1:hasImpactType ns1:environmentalImpact ;
+  rdfs:comment "Measures potential nutrient enrichment of freshwater ecosystems due to emissions of N and P compounds, causing effects such as algal blooms." ;
+  rdfs:label "Eutrophication, freshwater" .
+
+ns1:eutrophicationMarine
+  a owl:NamedIndividual, ns1:ImpactCategory ;
+  ns1:hasImpactType ns1:environmentalImpact ;
+  rdfs:comment "Measures potential nutrient enrichment of marine ecosystems due to emissions of N and P compounds." ;
+  rdfs:label "Eutrophication, marine" .
+
+ns1:eutrophicationTerrestial
+  a owl:NamedIndividual, ns1:ImpactCategory ;
+  rdfs:comment "Measures potential nutrient enrichment of terrestrial ecosystems due to nitrogen deposition." ;
+  rdfs:label "Eutrophication, Terrestial" .
+
+ns1:fossil a owl:NamedIndividual, ns1:EnergyFlow .
+ns1:fractionOfNutrientsReachingFreshwaterEndCompartmentP
+  a owl:NamedIndividual, ns1:ImpactCategoryIndicator ;
+  ns1:assessIC ns1:eutrophicationFreshwater ;
+  ns1:hasDefaultUnit "kg P -eq" ;
+  rdfs:label "Fraction of nutrients reaching freshwater end compartment (P)" .
+
+ns1:fractionOfNutrientsReachingMarineEndCompartmentN
+  a owl:NamedIndividual, ns1:ImpactCategoryIndicator ;
+  ns1:assessIC ns1:eutrophicationMarine ;
+  ns1:hasDefaultUnit "kg N -eq" ;
+  rdfs:label "Fraction of nutrients reaching marine end compartment (N)" .
+
+ns1:globalWarmingPotentialGWP100
+  a owl:NamedIndividual, ns1:ImpactCategoryIndicator ;
+  ns1:assessIC ns1:climateChangeTotal ;
+  ns1:quantifiedByCF ns1:globalWarmingPotentialGwpOverA100YearTimeHorizon ;
+  ns1:hasDefaultUnit "kg CO2-eq" ;
+  rdfs:label "Global Warming Potential (GWP100)" .
+
+ns1:globalWarmingPotentialGwpOverA100YearTimeHorizon
+  a owl:NamedIndividual, ns1:CharacterizationFactor ;
+  ns1:calculatedByCM ns1:bernModelBasedOnIPCC2021 ;
+  rdfs:label "Global warming potential (GWP) over a 100-year time horizon" .
+
+ns1:healthImpact
+  a owl:NamedIndividual, ns1:ImpactType ;
+  rdfs:label "Health Impact" .
+
+ns1:humanExposureEfficiencyRelativeToU235
+  a owl:NamedIndividual, ns1:ImpactCategoryIndicator ;
+  ns1:assessIC ns1:ionisingRadiationHumanHealth ;
+  ns1:hasDefaultUnit "kBq U235 -eq" ;
+  rdfs:label "Human exposure efficiency relative to U235" .
+
+ns1:humanHealthEffectModel
+  a owl:NamedIndividual, ns1:CharacterizationModel ;
+  dcterms:bibliographicCitation "as developed by Dreicer et al., 1995)" ;
+  rdfs:label "Human health effect model" .
+
+ns1:humanToxicityCancer
+  a owl:NamedIndividual, ns1:ImpactCategory ;
+  ns1:hasImpactType ns1:healthImpact ;
+  rdfs:comment "Measures the potential carcinogenic effects of a product system on humans due to chemical emissions." ;
+  rdfs:label "Human toxicity, cancer" .
+
+ns1:humanToxicityNonCancer
+  a owl:NamedIndividual, ns1:ImpactCategory ;
+  ns1:hasImpactType ns1:healthImpact ;
+  rdfs:comment "Measures the potential non-carcinogenic effects of a product system on humans due to chemical emissions." ;
+  rdfs:label "Human toxicity, non-cancer" .
+
+ns1:impactOnHumanHealth
+  a owl:NamedIndividual, ns1:ImpactCategoryIndicator ;
+  ns1:assessIC ns1:particulateMatter ;
+  ns1:hasDefaultUnit "disease incidence" ;
+  rdfs:label "Impact on human health" .
+
+ns1:ionisingRadiationHumanHealth
+  a owl:NamedIndividual, ns1:ImpactCategory ;
+  ns1:hasImpactType ns1:healthImpact ;
+  rdfs:comment "Measures the potential human health impact of ionizing radiation due to a product system, including exposure to radioactive substances." ;
+  rdfs:label "Ionising radiation, human health" .
+
+ns1:lancaModel
+  a owl:NamedIndividual, ns1:CharacterizationModel ;
+  dcterms:bibliographicCitation "Soil quality index based on LANCA model (De Laurentiis et al. 2019) and on the LANCA CF version 2.5 (Horn and Maier, 2018)" ;
+  rdfs:label "LANCA model" .
+
+ns1:landUseOccupationAndTransformation
+  a owl:NamedIndividual, ns1:ImpactCategory ;
+  ns1:hasImpactType ns1:environmentalImpact ;
+  rdfs:comment "Measures the potential environmental impact of land occupation and transformation due to a product system, including both the area of land used and its conversion from one type to another." ;
+  rdfs:label "Land use (occupation and transformation)" .
+
+ns1:manufacturing
+  a owl:NamedIndividual, ns1:LifeCycleStage ;
+  rdfs:comment "Stage involving material processing and product manufacturing." ;
+  rdfs:label "Manufacturing" .
+
+ns1:material
+  a owl:NamedIndividual, ns1:ResourceFlow ;
+  rdfs:label "Material" .
+
+ns1:methaneEmission
+  a owl:NamedIndividual, ns1:EmissionFlow ;
+  rdfs:label "Methane Emission" .
+
+ns1:mineralsAndMetals
+  a owl:NamedIndividual, ns1:ResourceFlow ;
+  rdfs:label "Minerals and Metals" .
+
+ns1:ozoneDepletion
+  a owl:NamedIndividual, ns1:ImpactCategory ;
+  ns1:hasImpactType ns1:environmentalImpact ;
+  rdfs:comment "Measures the potential reduction of the stratospheric ozone layer caused by emissions of ozone-depleting substances in a product system." ;
+  rdfs:label "Ozone depletion" .
+
+ns1:ozoneDepletionPotentialODP
+  a owl:NamedIndividual, ns1:ImpactCategoryIndicator ;
+  ns1:assessIC ns1:ozoneDepletion ;
+  ns1:hasDefaultUnit "kg CFC-11-eq" ;
+  rdfs:label "Ozone Depletion Potential (ODP)" .
+
+ns1:particulateMatter
+  a owl:NamedIndividual, ns1:ImpactCategory ;
+  ns1:hasImpactType ns1:environmentalImpact ;
+  rdfs:comment "Measures the potential human health impacts of fine particulate matter (PM2.5) emitted by a product system, including respiratory and cardiovascular effects." ;
+  rdfs:label "Particulate matter" .
+
+ns1:photochemicalOzoneFormationHumanHealth
+  a owl:NamedIndividual, ns1:ImpactCategory ;
+  ns1:hasImpactType ns1:environmentalImpact ;
+  rdfs:comment "Measures the potential human health impact of photochemical ozone formation (smog) due to VOCs and NOx emissions from a product system." ;
+  rdfs:label "Photochemical ozone formation, human health" .
+
+ns1:pmModel
+  a owl:NamedIndividual, ns1:CharacterizationModel ;
+  dcterms:bibliographicCitation "(Fantke et al., 2016 in UNEP 2016)" ;
+  rdfs:label "PM model" .
+
+ns1:rawMaterialAcquisition
+  a owl:NamedIndividual, ns1:LifeCycleStage ;
+  rdfs:comment "Stage involving extraction and acquisition of raw materials." ;
+  rdfs:label "Raw Material Acquisition" .
+
+ns1:resourceUseFossils
+  a owl:NamedIndividual, ns1:FossilEnergyFootprint ;
+  rdfs:comment "Measures the amount of fossil resources consumed by a product system, including coal, oil, and natural gas. Represented as FlowResult of type FossilResourceFlow." ;
+  rdfs:label "Resource use, fossils" .
+
+ns1:resourceUseMineralsAndMetals
+  a owl:NamedIndividual, ns1:FlowResult ;
+  ns1:hasFlowType ns1:mineralsAndMetals ;
+  rdfs:comment "Measures the amount of mineral and metal resources consumed by a product system. Represented as FlowResult of type MineralsAndMetalsFlow. Can be used to calculate the MaterialFootprint." ;
+  rdfs:label "Resource use, minerals and metals" .
+
+ns1:socialImpact
+  a owl:NamedIndividual, ns1:ImpactType ;
+  rdfs:label "Social Impact" .
+
+ns1:soilQualityIndexDimensionless
+  a owl:NamedIndividual, ns1:ImpactCategoryIndicator ;
+  ns1:assessIC ns1:landUseOccupationAndTransformation ;
+  rdfs:label "Soil quality index (dimensionless)" .
+
+ns1:troposphericOzoneConcentrationIncrease
+  a owl:NamedIndividual, ns1:ImpactCategoryIndicator ;
+  ns1:assessIC ns1:photochemicalOzoneFormationHumanHealth ;
+  ns1:hasDefaultUnit "kg NMVOC -eq" ;
+  rdfs:label "Tropospheric ozone concentration increase" .
+
+ns1:use
+  a owl:NamedIndividual, ns1:LifeCycleStage ;
+  rdfs:comment "Stage during which the product is used by the end user." ;
+  rdfs:label "Use" .
+
+ns1:userDeprivationPotentialDeprivationWeightedConsumption
+  a owl:NamedIndividual, ns1:ImpactCategoryIndicator ;
+  ns1:assessIC ns1:waterUse ;
+  ns1:hasDefaultUnit "m3 world-eq" ;
+  rdfs:label "User deprivation potential (deprivation-weighted consumption)" .
+
+ns1:water
+  a owl:NamedIndividual, ns1:ResourceFlow ;
+  rdfs:label "Water" .
+
+ns1:waterUse
+  a owl:NamedIndividual, ns1:WaterFootprint ;
+  rdfs:comment "" ;
+  rdfs:label "Water use" .
+
+<urn:swrl:var#r> a <http://www.w3.org/2003/11/swrl#Variable> .
+<urn:swrl:var#c> a <http://www.w3.org/2003/11/swrl#Variable> .
+<urn:swrl:var#i> a <http://www.w3.org/2003/11/swrl#Variable> .
+<urn:swrl:var#u> a <http://www.w3.org/2003/11/swrl#Variable> .
+_:genid8
+  a owl:Class ;
+  owl:unionOf (
+   _:genid10
+   _:genid12
+ ) .
+
+_:genid10
+  a owl:Restriction ;
+  owl:onProperty ns1:hasImpactCategory ;
+  owl:hasValue ns1:particulateMatter .
+
+_:genid12
+  a owl:Restriction ;
+  owl:onProperty ns1:hasImpactCategory ;
+  owl:hasValue ns1:photochemicalOzoneFormationHumanHealth .
+
+_:genid16
+  a owl:Restriction ;
+  owl:onProperty ns1:hasImpactCategory ;
+  owl:hasValue ns1:climateChangeTotal .
+
+_:genid20
+  a owl:Restriction ;
+  owl:onProperty ns1:hasFlowType ;
+  owl:someValuesFrom ns1:EnergyFlow .
+
+_:genid24
+  a owl:Restriction ;
+  owl:onProperty ns1:hasImpactCategory ;
+  owl:someValuesFrom [
+    a owl:Restriction ;
+    owl:onProperty ns1:hasImpactType ;
+    owl:hasValue ns1:environmentalImpact
+  ] .
+
+_:genid29
+  a owl:Class ;
+  owl:unionOf (
+   _:genid31
+   _:genid33
+   _:genid35
+ ) .
+
+_:genid31
+  a owl:Restriction ;
+  owl:onProperty ns1:hasImpactCategory ;
+  owl:hasValue ns1:eutrophicationFreshwater .
+
+_:genid33
+  a owl:Restriction ;
+  owl:onProperty ns1:hasImpactCategory ;
+  owl:hasValue ns1:eutrophicationMarine .
+
+_:genid35
+  a owl:Restriction ;
+  owl:onProperty ns1:hasImpactCategory ;
+  owl:hasValue ns1:eutrophicationTerrestial .
+
+_:genid39
+  a owl:Restriction ;
+  owl:onProperty ns1:hasFlowType ;
+  owl:someValuesFrom ns1:FlowType .
+
+_:genid43
+  a owl:Restriction ;
+  owl:onProperty ns1:hasFlowType ;
+  owl:hasValue ns1:fossil .
+
+_:genid47
+  a owl:Restriction ;
+  owl:onProperty ns1:hasImpactCategory ;
+  owl:someValuesFrom ns1:ImpactCategory .
+
+_:genid51
+  a owl:Restriction ;
+  owl:onProperty ns1:hasImpactCategory ;
+  owl:hasValue ns1:landUseOccupationAndTransformation .
+
+_:genid55
+  a owl:Restriction ;
+  owl:onProperty ns1:hasFlowType ;
+  owl:hasValue ns1:material .
+
+_:genid59
+  a owl:Restriction ;
+  owl:onProperty ns1:hasImpactCategory ;
+  owl:hasValue ns1:ozoneDepletion .
+
+_:genid63
+  a owl:Class ;
+  owl:unionOf (
+   _:genid65
+   _:genid67
+   _:genid69
+ ) .
+
+_:genid65
+  a owl:Restriction ;
+  owl:onProperty ns1:hasImpactCategory ;
+  owl:hasValue ns1:ecotoxicityFreshwater .
+
+_:genid67
+  a owl:Restriction ;
+  owl:onProperty ns1:hasImpactCategory ;
+  owl:hasValue ns1:humanToxicityCancer .
+
+_:genid69
+  a owl:Restriction ;
+  owl:onProperty ns1:hasImpactCategory ;
+  owl:hasValue ns1:humanToxicityNonCancer .
+
+_:genid73
+  a owl:Restriction ;
+  owl:onProperty ns1:hasFlowType ;
+  owl:hasValue ns1:water .
+
+[]
+  a <http://www.w3.org/2003/11/swrl#Imp> ;
+  ns2:body (
+   _:genid77
+   _:genid79
+   _:genid81
+   _:genid83
+   _:genid85
+   _:genid87
+ ) ;
+  ns2:head ( _:genid89 ) .
+
+_:genid77
+  a ns2:ClassAtom ;
+  ns2:classPredicate ns1:LcaResult ;
+  ns2:argument1 <urn:swrl:var#r> .
+
+_:genid79
+  a ns2:IndividualPropertyAtom ;
+  ns2:propertyPredicate ns1:isAssessedByICI ;
+  ns2:argument1 <urn:swrl:var#c> ;
+  ns2:argument2 <urn:swrl:var#i> .
+
+_:genid81
+  a ns2:ClassAtom ;
+  ns2:classPredicate ns1:ImpactCategoryIndicator ;
+  ns2:argument1 <urn:swrl:var#i> .
+
+_:genid83
+  a ns2:DatavaluedPropertyAtom ;
+  ns2:propertyPredicate ns1:hasDefaultUnit ;
+  ns2:argument1 <urn:swrl:var#i> ;
+  ns2:argument2 <urn:swrl:var#u> .
+
+_:genid85
+  a ns2:IndividualPropertyAtom ;
+  ns2:propertyPredicate ns1:hasImpactCategory ;
+  ns2:argument1 <urn:swrl:var#r> ;
+  ns2:argument2 <urn:swrl:var#c> .
+
+_:genid87
+  a ns2:ClassAtom ;
+  ns2:classPredicate ns1:ImpactCategory ;
+  ns2:argument1 <urn:swrl:var#c> .
+
+_:genid89
+  a ns2:DatavaluedPropertyAtom ;
+  ns2:propertyPredicate ns1:hasUnit ;
+  ns2:argument1 <urn:swrl:var#r> ;
+  ns2:argument2 <urn:swrl:var#u> .
+
