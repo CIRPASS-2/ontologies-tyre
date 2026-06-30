@@ -3,7 +3,8 @@
 This repository includes development resources contributing to ontology development for the tyre sector within the CIRPASS-2 project.  
 
 **Important disclaimer:**
-The ontologies for the tyre sector stored in this repository and generated within the CIRPASS-2 project do not represent an official ontology for the entire tyre sector and do not reflect any formal agreement and consensus withthin the tyre sector.   
+- The ontologies for the tyre sector stored in this repository and generated within the CIRPASS-2 project do not represent an official ontology for the tyre Digital Product Passport.   
+- This project is under active development. Information may be incomplete and is subject to change.  
 
 ## Overview  
 
